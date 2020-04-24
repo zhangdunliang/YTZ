@@ -1,0 +1,43 @@
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_refresh_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlAccentColor="@android:color/white"
+    app:srlEnableHeaderTranslationContent="false"
+    app:srlEnableLoadMore="false"
+    app:srlPrimaryColor="@color/colorPrimary"
+    tools:context=".app.fragment.HomeFragment">
+
+    <com.scwang.smartrefresh.header.MaterialHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/basic_background"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <include layout="@layout/fragment_home_notice" />
+
+            <!--<include layout="@layout/fragment_home_nc_withdrawal" />-->
+
+            <include layout="@layout/fragment_home_credit" />
+
+            <include layout="@layout/fragment_home_expect" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+

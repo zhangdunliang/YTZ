@@ -1,0 +1,263 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f7"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:id="@+id/yx_credit_asset_car_Back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dip" >
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/yx_credit_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/yx_credit_asset_car_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="添加车产"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/yx_credit_asset_car_Text1"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:layout_marginLeft="15dip"
+                android:gravity="center_vertical"
+                android:text="个人车辆信息"
+                android:textColor="#8B8B8B"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_asset_car_Type"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="输入车辆型号"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_asset_car_Plate"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="输入车牌号"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_asset_car_EngineNum"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="输入发动机编号"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/yx_credit_asset_car_DLRegisterDate_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_asset_car_DLRegisterDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="行驶证注册日期"
+                    android:textColor="#323232"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="11dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/yx_credit_more" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/yx_credit_asset_car_DLSendDate_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_asset_car_DLSendDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="行驶证发证日期"
+                    android:textColor="#323232"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="11dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/yx_credit_more" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_asset_car_Text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="行驶证照片"
+                    android:textColor="#323232"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/yx_credit_asset_car_CredentialPic_btn"
+                    android:layout_width="38dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/yx_credit_photograph_btn" />
+
+                <FrameLayout
+                    android:id="@+id/yx_credit_asset_car_CredentialPic_fl"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true" >
+
+                    <ImageView
+                        android:id="@+id/yx_credit_asset_car_CredentialPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/yx_credit_asset_car_CredentialPic_Again"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="点击重拍"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <Button
+                android:id="@+id/yx_credit_asset_car_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="30dip"
+                android:background="#60C9E9"
+                android:text="提交"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/yx_credit_asset_car_Text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="15dip"
+                android:text="*信息一经提交则无法更改，请仔细核对，以免影响您的申请"
+                android:textColor="#8B8B8B"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

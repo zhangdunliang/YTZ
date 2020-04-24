@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">信用金钱包</string>
+
+    <string name="main_tag1">首页</string>
+    <string name="main_tag2">我的</string>
+
+    <string name="login_or_register">登录/注册</string>
+    <string name="login_enter_phone">请输入手机号码</string>
+    <string name="login_enter_phone_error">请正确输入手机号码</string>
+    <string name="login_verifiy_code">请输入验证码</string>
+    <string name="login_text1">点击登录按钮代表您已同意</string>
+    <string name="login_out">退出登录</string>
+    <string name="login_agreement_register">用户协议</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_out_success">成功退出登录</string>
+    <string name="login_out_confirm">要退出当前账户吗？</string>
+
+    <!-- 版本更新 -->
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">版本更新</string>
+    <string name="soft_update_update_btn">更新</string>
+    <string name="soft_update_later_btn">先等等</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel_btn">取消</string>
+    <string name="soft_update_latest_version">已是最新版本</string>
+
+
+    <string name="idcard_first_front">请先上传身份证正面</string>
+    <string name="idcard_first_back">请先上传身份证反面</string>
+
+    <string name="web2_exit">真的关闭此页面？</string>
+
+    <string name="loading">加载中...</string>
+    <string name="exit">退出</string>
+    <string name="cancel">取消</string>
+    <string name="auth">授权</string>
+
+
+    <string name="nav_notice_center">消息中心</string>
+    <string name="nav_id_card">身份证认证</string>
+
+
+    <string name="notice_msg">消息</string>
+    <string name="notice_ntc">公告</string>
+    <string name="notice_INFO">资讯</string>
+
+    <string name="auth_message_ocr">"是否授权%s扫描您的身份证"</string>
+    <string name="auth_message_face">"是否授权%s对您进行人脸识别</string>
+    <string name="idcard_front_up_fail">身份证正面上传失败</string>
+    <string name="idcard_back_up_fail">身份证背面上传失败</string>
+
+    <string name="v_code_get_success">获取成功</string>
+    <string name="v_code_get_fail">验证码获取失败</string>
+    <string name="v_code_get_again">重新获取验证码</string>
+
+
+</resources>

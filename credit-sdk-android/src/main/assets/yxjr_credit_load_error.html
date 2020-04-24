@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <title>加载失败</title>
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            height: 100%;
+            /*IOS禁用系统默认菜单*/
+            -webkit-touch-callout: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+        body {
+            color: #323232;
+            font-size: 0.32rem;
+            background-color: #f5f5f7;
+            overflow: hidden;
+            /*-webkit-user-select: none; /!*禁止用户文本选中-生产模式启用*!/*/
+        }
+
+        .page-containers, .page-container {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .nav {
+            position: fixed;
+            width: 100%;
+            height: .88rem;
+            line-height: .86rem;
+            text-align: center;
+            background: #F7F7F7;
+            z-index: 99;
+        }
+        .nav-top {
+            top: 0;
+            border-bottom: 1px solid #d2d2d2;
+            background: #F7F7F7;
+        }
+        .nav-center {
+            position: absolute;
+            padding: 0 1.06rem;
+            width: 100%;
+            text-align: center;
+            z-index: -1;
+        }
+        .nav-right,
+        .nav-left {
+            height: 100%;
+            width: 1.06rem;
+            z-index: 2;
+        }
+        .nav-left {
+            float: left;
+            padding-left: .20rem;
+        }
+        .nav-left span {
+            display: block;
+            margin-top: .23rem;
+            width: .40rem;
+            height: .40rem;
+        }
+        .nav-right {
+            float: right;
+            padding-right: .36rem;
+            text-align: right;
+            font-size: .28rem;
+            color: #323232;
+        }
+
+        .icon-turn-left {
+            background: no-repeat url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAgBAMAAADtUjXCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEUAAACZmZmZmZmZmZmZmZmZmZmZmZmZmZkAAADY53ywAAAAB3RSTlMAMJ/vYBDPhZoKCgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA3SURBVBjTY2CAAgEYg8kQxlIvgTLCyh0gDNZ0egsxCBfDXMZoDncZhYJhcEHWdHIEYa5kYHUAAN0YFufPZOxhAAAAAElFTkSuQmCC") center;
+            -o-background-size: contain;
+            -moz-background-size: contain;
+            -webkit-background-size: contain;
+            background-size: contain;
+        }
+
+        .icon-wifi {
+            background: no-repeat url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAES0lEQVR4Xu2ajVEUQRCFuyPQDJQIlAjUCMQIlAjECMQIxAiECIQIhAjECIQMJIK2vqsevTtmd6dn9wbrbrtq66pgdqb79d/ruVPZcdEdt19mAOYI2HEE5hTY8QCYi+CcAnMK7DgCzVLAzB6LyDPH+2UH7tci8ltEblX1poVvNgaAmb0QEQzleS4iABCVSxEBFD6vVBVwJpVJATCz1yLyTkQOJtXy32YAcSoiF1OBMRoAM3sqIu/d8Bov12BFJJyLyKexqVINgBv+0Q2vMWKqd4iIaiCqADAzDD+eyoKJ9jlxIEJ1IgSAmVHQvooIYf8/Cp3jUFWpFUVSDICZfRaRo6JdH37RqaoelqgxCIDn+jdvZSV7dq25FRE8lHo961K4puLJJy2TCHsy5jA/581QkewFwMxQ5ntlD8dgKjXheBltW06cEo+grdYAAsCvVBXQs9IJgJlxKPkebW1n9OpIHpZ42p1BCr4tWb+2hrpAt7gnWQDMDDKD8aVyJyJU4ZOop0sPSOs8MgCC51Hg/SwI9wDwSk/YlwoeP9q04evKOBCAHokI0mGlQ+QA+FFY8H5CgvryqxTBMes8NQjvNGj1bXetqvvLC3IAWIFCVV73AYkKn3hE+kyTH583qnpVoMPfJZFoUNUVm3MAoERfxe0sKJkwxUAGJApq1wjcZSuhShdh8CkajQtq152qrhT1HABQXKjuulDoCHmU6hWvI+wRNboPDPj+IMPz7kVK5Aoke6xQ+K4ugJF4Lgk9/WAo391wGCP8YRNCP/8wBITXBWxYjmQi6d6Y3scDMIJnwd76qrznIB5vRZXxMEB0Dj6uU7IBIpYlQ4NUeMiNjjZUufWAhGOgup0sb0h3/j8KgBFssUS3kjVEAJGQZXklG1QDUFBxS86ntiA1PH95/+LOtK5UFQA+IUKYInMCxInCdN4Vtp5OFCqeEmKT7CES9kvb5TIItQBEZgVI03FUOQeZllVKdUkFqHFIagHo4grLh1/4jFBEYrq0diAwbLkt55bf6/ElSNQCQHshBbqkSpk+hc1sCHRSINwRqgBAUTNbJ0v8GbbIZFhdlQdAoDbkWF6W5GwsAtLG7hWUohiCPsaPCvkhpZdSgihcfD+wTm+H9hhdBCMHrK91hkZhA7hEmQGPiDprfa9QnQI1IBTcMQ7e4dWc2/dOMwAKjF/u6b0XmVOC0BKAX4F5gUuRvSkN7dqrCQA+MzAwRYRBZ/DuIbJhbm0rACAyfIMcEQoijHOj0goAbnL4wURE+EHEVDdKnee2AiBHmobA2CoAuCniqiwiVcNN5ADWtooAbovoAhHZ2zSrbAYAB5lZpBB+UdUm94tNIiC53cxKimGT3E86NQXAI4GxNvfF5uIL1jGDTSS/HgwAB4HpMf1+kD8tfgvYehBqWgNqvNPineYp0MKoyBkzABG0tnHtHAHb6NWITXMERNDaxrVzBGyjVyM27XwE/AFdnnFQgCCZMwAAAABJRU5ErkJggg==") center;
+            -o-background-size: contain;
+            -moz-background-size: contain;
+            -webkit-background-size: contain;
+            background-size: contain;
+        }
+
+        .page-view {
+            padding-top: .88rem;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .t-01 {
+            text-align: center;
+            font-size: 14px;
+            color: #bdbdbd;
+        }
+
+        .btn {
+            display: block;
+            margin: 0 auto;
+            width: 2.26rem;
+            height: .56rem;
+            line-height: .52rem;
+            color: #888;
+            font-size: .24rem;
+            border: .02rem solid #888;
+            text-align: center;
+            border-radius: .10rem;
+        }
+
+        .btn:active{
+            background: #f0f0f0;
+        }
+
+        .fl-01{
+            position: relative;
+            margin: 4.00rem auto 0;
+            width: 1.66rem;
+            height: 1.66rem;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .fl-01-i{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: .93rem;
+            width: .93rem;
+        }
+
+    </style>
+    <script>
+        (function () {
+            // webapp 自适应 7.5 =
+            document.addEventListener('DOMContentLoaded', function () {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                console.log(html.style.fontSize);
+            }, false);
+        })();
+    </script>
+</head>
+<body>
+<div id="containers" class="page-containers">
+    <div class="nav nav-top">
+        <a onclick="backHistory()" class="nav-left"><span class="icon-turn-left"></span></a>
+        <h4 class="nav-center"></h4>
+        <a class="nav-right"></a>
+    </div>
+
+    <div class="page-view">
+        <div class="fl-01">
+            <div class="icon-wifi fl-01-i"></div>
+        </div>
+        <p class="t-01">页面加载失败</p>
+        <a class="btn" onclick="send('required')">重新加载</a>
+    </div>
+
+</div>
+
+<!--<div id="alonediv">
+    <img src="img/WIFI.png" />
+</div>-->
+<!--<div class="explaintext">
+    <p class="t-01">页面加载失败</p>
+    <a class="btn" onclick="send()">重新加载</a>
+</div>-->
+<script>
+    //251 重载
+    var sendConf = {
+        "pageHome": '251',
+        "required": '103'
+    }
+    var userAgent = function (){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return{
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android uc
+            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //iPhone QQHD
+        }
+    }();
+
+    function send(url){
+        var option = {data:{},serviceId:'',code:sendConf[url],key:''};
+        if(userAgent.ios){
+            appBridgeService(option);
+        }else if(userAgent.android){
+            var str = JSON.stringify(option);
+            javascript:android.appBridgeService(str)
+        }
+    }
+
+    function backHistory(){
+        send('pageHome')
+    }
+    document.addEventListener('touchstart', function(){}, false)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget>
+    <!-- 魔蝎 -->
+    <feature name="266">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.MoxiePlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 重置Web -->
+    <feature name="103">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.WebResetPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 系统通讯录 -->
+    <feature name="202">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.OpenContactsPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 退出web -->
+    <feature name="251">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.ExitWeb1Plugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 老实名认证 -->
+    <feature name="252">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.ProveRealNamePlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 车产认证 -->
+    <feature name="253">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.ProveCarPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 房产认证 -->
+    <feature name="254">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.ProveHousePlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 增加Web -->
+    <feature name="263">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.WebNewPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 设置权限 -->
+    <feature name="264">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.OpenPermissionPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 获取权限 -->
+    <feature name="208">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.GetPermissionPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 获取用户信息 -->
+    <feature name="205">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.GetUserInfoPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 请求中转 -->
+    <feature name="200">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.ServerPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 身份证扫描 -->
+    <feature name="257">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.FaceOcr1Plugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 新增身份证扫描 -->
+    <feature name="259">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.FaceOcr2Plugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 人脸识别 -->
+    <feature name="256">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.FaceLivePlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 获取产品ID并返回存储状态 -->
+    <feature name="207">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.GetProductIdPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 获取同盾值 -->
+    <feature name="209">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.GetTdPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 是否安装**应用 -->
+    <feature name="267">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.IsInstallPlugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+    <!-- 关闭第二个Web -->
+    <feature name="258">
+        <param
+            name="android-package"
+            value="com.fiveoneofly.cgw.bridge.ExitWeb2Plugin" />
+        <param
+            name="load"
+            value="true" />
+    </feature>
+
+</widget>

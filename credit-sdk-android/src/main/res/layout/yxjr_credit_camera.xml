@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#444444" >
+
+    <RelativeLayout
+        android:id="@+id/yx_credit_rlPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/yx_credit_rl_right"
+        android:background="#444444" >
+
+        <ImageView
+            android:id="@+id/yx_credit_iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:background="#00000000" />
+
+        <TextureView
+            android:id="@+id/yx_credit_tv_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp" />
+
+        <ImageView
+            android:id="@+id/yx_credit_assist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/yx_credit_assist"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/yx_credit_rl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:background="#444444" >
+
+        <RelativeLayout
+            android:id="@+id/yxcredit_rl_cancel_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" >
+
+            <TextView
+                android:id="@+id/yx_credit_tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="取消"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/yx_credit_iv_select"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/yx_credit_select" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/yx_credit_iv_take"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/yx_credit_take" />
+
+        <RelativeLayout
+            android:id="@+id/yx_credit_no_change"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp" >
+
+            <ImageView
+                android:id="@+id/yx_credit_iv_again"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/yx_credit_cancel" />
+
+            <ImageView
+                android:id="@+id/yx_credit_iv_change"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/yx_credit_change" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

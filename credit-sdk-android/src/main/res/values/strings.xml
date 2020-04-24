@@ -1,0 +1,25 @@
+<resources>
+    <array name="face_detect_type">
+        <item>眨眼</item>
+        <item>张嘴</item>
+        <item>摇头</item>
+    </array>
+    <array name="face_detect_result">
+        <item />
+        <item>LIVEPASS</item>
+        <item>人脸追踪失败</item>
+        <item>超时失败</item>
+        <item>LIVENOTPASS</item>
+    </array>
+
+    <string name="face_netowrk_parse_failed">解析服务器数据失败</string>
+    <string name="face_network_error">网络请求失败</string>
+    <string name="face_verify_error">验证失败</string>
+    <string name="face_verify_success">验证成功</string>
+    <string name="face_liveness_detection_failed">活体检测失败</string>
+    <!--  -->
+    <string name="face_liveness_detection_failed_timeout">检测超时，请重新操作</string>
+    <string name="face_liveness_detection_failed_action_blend">请按照提示做动作</string>
+    <string name="face_liveness_detection_failed_not_video">请本人在光线良好的环境下进行识别</string>
+    <string name="face_novalidframe">没有合适的图像用于人脸识别</string>
+</resources>

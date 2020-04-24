@@ -1,0 +1,236 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fiveoneofly.cgw">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!-- 读存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!-- 读存储 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /><!-- WIFI网络状态信息权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 改变wifi网络状态权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /><!-- 通讯录权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" /><!-- 通讯录权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" /><!-- 短信权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /><!-- 获取地理位置权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /><!-- 获取地理位置权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /><!-- 允许读取手机状态的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /><!-- 调用相机 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" /><!-- 读通话记录 -->
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" /><!-- 写通话记录 -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" /><!-- 传感器 -->
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" /><!-- 读取浏览器历史记录和书签 -->
+
+     <!--相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+     <!--往 SDCard 写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /><!-- 录音权限 -->
+
+    <!-- 魔蝎权限start -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <!-- 个推3.0 iBeancon功能所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".app.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5b5ec49fa40fa30f9400027a" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${RELEASE_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="RELEASE_CHANNEL"
+            android:value="${RELEASE_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="RELEASE_CHANNEL"
+            android:value="${RELEASE_CHANNEL_VALUE}" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.fiveoneofly.cgw.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+        <!-- V5KF start -->
+        <activity
+            android:name="com.v5kf.client.ui.ClientChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/v5_chat_title"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize" />
+        <service android:name="com.v5kf.client.lib.V5ClientService" />
+
+        <activity android:name="com.v5kf.client.ui.WebViewActivity" />
+        <activity
+            android:name="com.v5kf.client.ui.ShowImageActivity"
+            android:theme="@style/v5_transparent_activity" />
+
+        <provider
+            android:name="com.v5kf.client.lib.V5FileProvider"
+            android:authorities="com.fiveoneofly.cgw.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/v5_file_paths" />
+        </provider>
+        <!-- V5KF end -->
+
+        <!-- 同盾start -->
+        <meta-data
+            android:name="PARTNER_CODE"
+            android:value="yxjr" />
+        <!-- 同盾end -->
+        <!-- 信鸽start -->
+        <receiver
+            android:name="com.fiveoneofly.cgw.third.xinge.XingeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+        <!-- 信鸽end -->
+
+        <!--自家心跳-->
+        <service android:name="com.fiveoneofly.cgw.service.Service" />
+
+        <!-- 魔蝎 -->
+        <activity
+            android:name="com.moxie.client.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!--个推自定义推送服务-->
+        <service
+            android:name="com.fiveoneofly.cgw.third.getui.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"
+            tools:ignore="ExportedService" />
+        <!--个推接收消息-->
+        <service android:name="com.fiveoneofly.cgw.third.getui.IntentService" />
+
+        <!-- 启动页 -->
+        <activity
+            android:name=".app.activity.FirstActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--H5调起APP支持-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--window.location.href = 'launchxyjqb://'-->
+                <!--<a href="launchxyjqb://">启动信用金钱包</a>-->
+                <data android:scheme="launchxyjqb" />
+            </intent-filter>
+        </activity>
+        <!-- 引导页 -->
+        <activity
+            android:name=".app.activity.IntroActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <!-- 公共WebView页面 -->
+        <activity
+            android:name=".app.activity.Web1Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".app.activity.Web2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 主页 -->
+        <activity
+            android:name=".app.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心 -->
+        <activity
+            android:name=".app.activity.NoticeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 消息列表 -->
+        <activity
+            android:name=".app.activity.NoticeListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 身份认证页 -->
+        <activity
+            android:name=".app.activity.IdCardVerifyActivity"
+            android:screenOrientation="portrait" />
+        <!-- 人脸识别页 -->
+        <activity
+            android:name=".app.activity.IdentityVerifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 登录页 -->
+        <activity
+            android:name=".app.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- Face++ start-->
+        <!-- idcard -->
+        <activity
+            android:name=".app.activity.MegviiOcr2Activity"
+            android:configChanges="keyboard|screenSize|orientation|layoutDirection"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".app.activity.MegviiOcr1Activity"
+            android:configChanges="keyboard|screenSize|orientation|layoutDirection"
+            android:screenOrientation="landscape" />
+        <!-- live -->
+        <activity
+            android:name=".app.activity.MegviiFace2Activity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".app.activity.MegviiFace1Activity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- Face++ end-->
+    </application>
+
+</manifest>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liveness_layout_rootRel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/liveness_layout_topBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/yx_credit_liveness_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:src="@drawable/yx_credit_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="退出"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/yx_credit_liveness_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="面部识别"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dedede" />
+    </RelativeLayout>
+
+    <TextureView
+        android:id="@+id/liveness_layout_textureview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/liveness_layout_topBar" />
+
+    <com.fiveoneofly.cgw.third.megvii.widget.FaceMask
+        android:id="@+id/liveness_layout_facemask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/liveness_layout_topBar" />
+
+    <com.fiveoneofly.cgw.third.megvii.widget.AutoRatioImageview
+        android:id="@+id/liveness_layout_head_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/liveness_layout_topBar"
+        android:src="@drawable/yxjr_credit_face_liveness_result_mask" />
+
+    <LinearLayout
+        android:id="@+id/liveness_layout_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/liveness_layout_topBar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="请根据提示做以下动作"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="(最后一步,完成即可自动提交)"
+            android:textColor="#61D0FF"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp">
+
+            <LinearLayout
+                android:id="@+id/liveness_layout_bottom_tips_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/liveness_layout_promptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="请在光线充足的情况下进行检测"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detection_step_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="眨眼"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/detection_step_timeoutRel"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dip"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/detection_step_timeout_garden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="10"
+            android:textColor="#00BEE2"
+            android:textSize="20sp" />
+
+        <com.fiveoneofly.cgw.third.megvii.widget.CircleProgressBar
+            android:id="@+id/detection_step_timeout_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/liveness_layout_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true">
+
+            <com.fiveoneofly.cgw.third.megvii.widget.RotaterView
+                android:id="@+id/liveness_layout_result_rotater"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/liveness_layout_result_status"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/yxjr_credit_face_liveness_result_failded" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/liveness_layout_result_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="验证成功"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/liveness_layout_suggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/liveness_layout_ok"
+            android:layout_centerHorizontal="true"
+            android:text="请在光线充足的环境下进行操作"
+            android:textColor="#323232"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/liveness_layout_ok"
+            style="@style/faceButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:text="确定"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/liveness_layout_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/yx_credit_live_barLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/yx_credit_live_WarrantyBar"
+            android:layout_width="30dip"
+            android:layout_height="30dip" />
+
+        <TextView
+            android:id="@+id/yx_credit_live_WarrantyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="正在联网授权中..."
+            android:textColor="#666666"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/yx_credit_live_againWarrantyBtn"
+            android:layout_width="230dip"
+            android:layout_height="50dip"
+            android:layout_below="@+id/loading_layout_barLinear"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dip"
+            android:background="@drawable/yxjr_credit_face_btn_select"
+            android:text="重新联网授权"
+            android:textColor="#ffffffff"
+            android:textSize="22sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

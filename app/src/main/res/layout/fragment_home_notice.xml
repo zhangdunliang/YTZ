@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:vswitch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:gravity="center_vertical"
+    tools:context=".app.fragment.HomeFragment"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/home_notice_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_home_notice" />
+
+    <com.fiveoneofly.cgw.app.widget.VerticalSwitchTextView
+        android:id="@+id/home_notice_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_marginStart="5dp"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:maxEms="11"
+        android:ellipsize="end"
+        android:maxLines="1"
+        vswitch:alignment="left"
+        vswitch:idleDuaration="1000"
+        vswitch:switchDuaration="1000"
+        vswitch:switchOrientation="up" />
+
+    <View
+        android:id="@+id/home_notice_dot1"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/home_notice_dot2"
+        android:layout_toStartOf="@+id/home_notice_dot2"
+        android:background="@drawable/dot_orange" />
+
+    <View
+        android:id="@+id/home_notice_dot2"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/home_notice_dot3"
+        android:layout_toStartOf="@+id/home_notice_dot3"
+        android:background="@drawable/dot_orange" />
+
+    <View
+        android:id="@+id/home_notice_dot3"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/dot_orange" />
+</LinearLayout>
+

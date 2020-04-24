@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F7"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:id="@+id/yx_credit_asset_house_Back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dip" >
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/yx_credit_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/yx_credit_asset_house_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/yx_credit_asset_house_Text1"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:layout_marginLeft="15dip"
+                android:gravity="center_vertical"
+                android:textColor="#8B8B8B"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/yx_credit_asset_house_ProvinceAndCity_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_asset_house_ProvinceAndCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="#323232"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="11dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/yx_credit_more" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_asset_house_Address"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_asset_house_Area"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/yx_credit_asset_house_Time_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_asset_house_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="#323232"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="11dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/yx_credit_more" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_asset_house_Price"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_asset_house_Text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/yx_credit_asset_house_CredentialPic_btn"
+                    android:layout_width="38dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <FrameLayout
+                    android:id="@+id/yx_credit_asset_house_CredentialPic_fl"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true" >
+
+                    <ImageView
+                        android:id="@+id/yx_credit_asset_house_CredentialPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/yx_credit_asset_house_CredentialPic_Again"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <Button
+                android:id="@+id/yx_credit_asset_house_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="30dip"
+                android:background="#60C9E9"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/yx_credit_asset_house_Text3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="15dip"
+                android:gravity="top"
+                android:textColor="#8B8B8B"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

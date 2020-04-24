@@ -1,0 +1,256 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#f8f8f8" >
+
+        <RelativeLayout
+            android:id="@+id/yx_credit_certify_autonym_Back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dip" >
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/yx_credit_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/yx_credit_certify_autonym_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="实名认证"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/yx_credit_certify_autonym_SublTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:text="常见问题"
+            android:textColor="#8b8b8b" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/yx_credit_certify_autonym_Text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="15dip"
+                android:gravity="center_vertical"
+                android:text="额度宝会保护您的信息"
+                android:textColor="#8B8B8B"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_certify_autonym_Name"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="请输入您的姓名"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <EditText
+                android:id="@+id/yx_credit_certify_autonym_IdentityNum"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="请输入您的身份证号"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColorHint="#bdbdbd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/yx_credit_certify_autonym_Text2"
+                android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="15dip"
+                android:gravity="center_vertical"
+                android:text="身份证拍照"
+                android:textColor="#8B8B8B"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/yx_credit_certify_autonym_IdNumFrontPic_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/yx_credit_identity_card_front" />
+
+                    <ImageView
+                        android:id="@+id/yx_credit_certify_autonym_IdNumVersoPic_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dip"
+                        android:layout_weight="1"
+                        android:src="@drawable/yx_credit_identity_card_verso" />
+
+                    <ImageView
+                        android:id="@+id/yx_credit_certify_autonym_IdNumHandPic_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/yx_credit_identity_card_in_hand" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="30dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/yx_credit_certify_autonym_Text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:text="实名影像认证说明："
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/yx_credit_certify_autonym_Text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1、"
+                        android:textColor="#8B8B8B" />
+
+                    <TextView
+                        android:id="@+id/yx_credit_certify_autonym_Text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="1dp"
+           				android:lineSpacingMultiplier="1.2"
+                        android:text="身份证正面、反面照片须无遮挡、无反光、无修改、字迹、头像均清晰可见;"
+                        android:textColor="#8B8B8B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/yx_credit_certify_autonym_Text7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2、"
+                        android:textColor="#8B8B8B" />
+
+                    <TextView
+                        android:id="@+id/yx_credit_certify_autonym_Text8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:lineSpacingExtra="1dp"
+           				android:lineSpacingMultiplier="1.2"
+                        android:text="手持身份证照片须手持身份证，同时露脸并露肘身份证及本人均需无遮挡、无反光、无修改，本人及身份证影像字迹、头像均清晰可见。"
+                        android:textColor="#8B8B8B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/yx_credit_certify_autonym_Text9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3、"
+                        android:textColor="#8B8B8B" />
+
+                    <TextView
+                        android:id="@+id/yx_credit_certify_autonym_Text10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="查看影像示例"
+                         android:lineSpacingExtra="1dp"
+           				android:lineSpacingMultiplier="1.2"
+                        android:textColor="#3e7191" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/yx_credit_certify_autonym_Submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dip"
+                    android:layout_marginTop="30dip"
+                    android:background="@drawable/yxjr_credit_btn_radius_blue"
+                    android:text="提交"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

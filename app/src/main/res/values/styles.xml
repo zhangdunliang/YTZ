@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- 全屏 -->
+    <style name="AppTheme.FullScreen">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--加载框-->
+    <style name="loadingProgress" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!--弹出框时让背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--按钮-->
+    <!--通用按钮样式-->
+    <style name="ButtonNormal" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_blue_press_select</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!--登录输入框样式-->
+    <style name="EditTextNormal" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/majorText</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColorHint">@color/minorText</item>
+    </style>
+</resources>

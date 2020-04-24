@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="web_activity_toolbar_id" type="id" />
+    <item name="web_fragment_layout_id" type="id" />
+    <item name="fragment_layout_id" type="id" />
+</resources>

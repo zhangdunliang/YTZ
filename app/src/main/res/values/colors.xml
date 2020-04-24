@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#57D1FF</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#00AFEC</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!--h5状态栏颜色-->
+    <color name="h5_status">#d2d2d2</color>
+
+    <!-- 用于首页重要板块以及按钮图标的使用 -->
+    <color name="homeMajorArea">#160C00</color>
+    <!-- 用于首页重要按钮以及活动标签 -->
+    <color name="homeMajorWidget">#E2CEA0</color>
+    <!-- 用于顶部导航标题，主要文字 -->
+    <color name="navMajor">#030303</color>
+    <!-- 用于重要标题文字 -->
+    <color name="majorText">#333333</color>
+    <!-- 用于重要提示或文案说明 -->
+    <color name="majorDoc">#E43844</color>
+    <!-- 用于正文文字或标题说明文字 -->
+    <color name="mainText">#666666</color>
+    <!-- 用于辅助或次要文字信息 -->
+    <color name="minorText">#999999</color>
+    <!-- 用于按钮不可按状态 -->
+    <color name="btnDisable">#E1E1E1</color>
+    <!-- 分割线（重）用于列表分割线 -->
+    <color name="splitDark">#CCCCCC</color>
+    <!-- 主页面背景色 -->
+    <color name="mainBackground">#E7E7E7</color>
+    <!-- 分割线（浅）用于模块等重要分割线 -->
+    <color name="splitLight">#F5F5F5</color>
+    <!-- 用于提示状态 -->
+    <color name="prompt">#38E49D</color>
+
+</resources>
